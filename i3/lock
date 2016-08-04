@@ -1,0 +1,5 @@
+#!/bin/bash
+scrot /tmp/screenshot.png
+convert /tmp/screenshot.png -blur 0x3 /tmp/screenshotblur.png
+composite -gravity Center ~/.config/i3/lock-icon.png /tmp/screenshotblur.png /tmp/sbl.png
+i3lock -u -i /tmp/sbl.png
